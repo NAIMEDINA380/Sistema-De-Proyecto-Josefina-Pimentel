@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Principal - U.E. Josefina Pimentel</title>
+    <title>Panel Administrativo - U.E. Josefina Pimentel</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <div class="dashboard-container">
-        <header>
-            <h1>U.E. Josefina Pimentel</h1>
-            <div class="user-info">
-                <span>Bienvenido, <strong>NAYMEDINA12</strong></span>
-                <button onclick="window.location.href='index.html'" style="width: auto; padding: 5px 15px; margin-left: 10px;">Salir</button>
-            </div>
-        </header>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h2>U.E. Josefina Pimentel</h2>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">🏠 Inicio</a>
+                <a href="#">📋 Nóminas</a>
+                <a href="#">📂 Expedientes</a>
+                <a href="index.html" style="color: #ff6b6b; margin-top: 20px;">🚪 Salir</a>
+            </nav>
+        </aside>
 
-        <main>
-            <h2>Gestión del Sistema</h2>
-            <div class="modules-grid">
-                <div class="module-card">
-                    <h3>Nóminas</h3>
-                    <p>Gestión de pagos y personal docente/obrero.</p>
-                    <button>Ingresar</button>
-                </div>
-                <div class="module-card">
-                    <h3>Expedientes</h3>
-                    <p>Control de estudiantes y representantes.</p>
-                    <button>Ingresar</button>
-                </div>
-                <div class="module-card">
-                    <h3>Inscripciones</h3>
-                    <p>Registro de nuevos alumnos y secciones.</p>
-                    <button>Ingresar</button>
+        <main class="main-content">
+            <header class="top-bar">
+                <input type="text" placeholder="Buscar..." style="padding: 5px 10px; border-radius: 4px; border: 1px solid #ddd;">
+                <div class="user"><strong>NAYMEDINA12</strong> (Admin)</div>
+            </header>
+
+            <div class="content-body">
+                <div class="data-card">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h3>Registro de Personal / Estudiantes</h3>
+                        <button style="width: auto; padding: 5px 15px;">+ Nuevo</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cédula</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Cargo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>V-00.000.000</td>
+                                <td>(Vacío)</td>
+                                <td>(Vacío)</td>
+                                <td>(Vacío)</td>
+                                <td>
+                                    <button class="btn-action" style="background: #28a745;">Editar</button>
+                                    <button class="btn-action" style="background: #dc3545;">Borrar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
